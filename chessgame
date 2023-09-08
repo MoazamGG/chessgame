@@ -1,0 +1,21 @@
+import chess
+
+# Create a chess board
+board = chess.Board()
+
+# Example moves
+board.push_san("e4")
+board.push_san("e5")
+board.push_san("Nf3")
+
+# Print the current board state
+print(board)
+
+# Check legal moves for a specific piece
+legal_moves = list(board.legal_moves)
+print("Legal moves for the knight:", legal_moves)
+
+# Check if the game is over
+if board.is_game_over():
+    result = board.result()
+    print("Game over. Result:", result)
